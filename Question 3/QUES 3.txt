@@ -1,0 +1,6 @@
+This task demonstrates the use of Linux commands and shell scripting as required in the lab assignment.
+
+The script/commands were executed according to the problem statement, and the output was verified using the terminal.
+Relevant screenshots are provided in the screenshots directory to show successful execution.
+
+The results confirm that the commands work as expected and meet the requirements of Question 3.
