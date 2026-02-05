@@ -1,0 +1,5 @@
+Child process created. PID = 36383
+Child process created. PID = 33628
+Parent cleaned up child with PID = 35739
+Parent cleaned up child with PID = 36494
+All child processes cleaned. No zombies remain.
