@@ -1,0 +1,29 @@
+$# = number of command-line arguments
+
+-ne 1 = not equal to 1
+
+If more or less than one argument is given, the script stops.
+$1 = first command-line argument
+
+Stored in a variable to make the script readable and reusable
+-e checks whether a file or directory exists
+
+! means “not”
+
+If the path does not exist, an error is shown and the script exits
+-f checks if the argument is a file
+
+wc displays:
+number of lines
+number of words
+number of characters
+
+-d checks if the argument is a directory
+"find" searches inside the directory
+
+-type f → only files (not directories)
+
+wc -l counts them
+
+
+After creating analyze.sh, i used wc filename command to check if its working .
