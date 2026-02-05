@@ -1,1 +1,1 @@
-The script analyzes text from input.txt using pipelines. It breaks text into individual words, identifies the longest and shortest words, computes the average word length, and counts unique words using sort and uniq. EOF
+The script analyzes text from input.txt using pipelines. It breaks text into individual words, identifies the longest and shortest words, computes the average word length, and counts unique words using sort and uniq. 
