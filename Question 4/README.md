@@ -1,1 +1,1 @@
-
+The script reads email addresses from emails.txt and uses grep with a regular expression to separate valid and invalid emails. Valid email addresses are sorted and duplicates are removed using sort and uniq before saving to valid.txt. Invalid email addresses are stored separately in invalid.txt for verification.
