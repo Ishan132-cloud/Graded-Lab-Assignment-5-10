@@ -1,1 +1,1 @@
-
+The script compares two directories without modifying any files. It uses the comm command to identify files unique to each directory. For files with the same name, cmp is used to verify whether their contents are identical or different. EOF
