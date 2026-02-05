@@ -1,1 +1,1 @@
-
+The script converts all input words to lowercase and classifies them using regular expressions. Words containing only vowels are written to vowels.txt, only consonants to consonants.txt, and words containing both vowels and consonants that start with a consonant are written to mixed.txt.
