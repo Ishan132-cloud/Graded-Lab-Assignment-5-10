@@ -1,15 +1,21 @@
 #!/bin/bash
 
-# Normalize to lowercase, one word per line
-words=$(tr '[:upper:]' '[:lower:]' < input.txt)
+# Convert text to one word per line, lowercase
+words=$(tr '[:space:]' '\n' < input.txt | tr '[:upper:]' '[:lower:]')
 
-# Only vowels
-grep -E '^[aeiou]+$' <<< "$words" > vowels.txt
+# Longest word
+longest=$(echo "$words" | awk '{ print length, $0 }' | sort -nr | head -n 1 | cut -d" " -f2)
 
-# Only consonants
-grep -E '^[bcdfghjklmnpqrstvwxyz]+$' <<< "$words" > consonants.txt
+# Shortest word
+shortest=$(echo "$words" | awk '{ print length, $0 }' | sort -n | head -n 1 | cut -d" " -f2)
 
-# Mixed: starts with a consonant AND contains at least one vowel AND one consonant
-grep -E '^[bcdfghjklmnpqrstvwxyz][a-z]*$' <<< "$words" \
-| grep -E '[aeiou]' \
-| grep -E '[bcdfghjklmnpqrstvwxyz]' > mixed.txt
+# Average word length
+avg=$(echo "$words" | awk '{ total+=length; count++ } END { print total/count }')
+
+# Unique word count
+unique=$(echo "$words" | sort | uniq | wc -l)
+
+echo "Longest word: $longest"
+echo "Shortest word: $shortest"
+echo "Average word length: $avg"
+echo "Unique words: $unique"
